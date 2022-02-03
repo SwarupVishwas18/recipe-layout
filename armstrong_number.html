@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+
+    <link rel="stylesheet" href="./recipe_theme.css">
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Marcellus&family=Montserrat&family=Syncopate&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="logo">
+        Program Recipes
+    </h1>
+    <hr>
+    <h2 class="title">
+        Armstrong Number
+    </h2>
+    <hr>
+    <ul class="index">
+        <li>
+    <h3 class="section-title">Table of Contents (Click Me To Pick)</h3>
+
+        </li>
+        <a href="#intro">
+            <li>Introduction</li>
+        </a>
+        <a href="#para">
+            <li>Parameter Needed</li>
+        </a>
+        <a href="#algo">
+            <li>Algorithm</li>
+        </a>
+        <a href="#code">
+            <li>Code in Javascript</li>
+        </a>
+        <a href="#op">
+            <li>Output</li>
+        </a>
+    </ul>
+
+    <main>
+        <section id="intro">
+            <h3 class="section-title">Introduction: What is an Armstrong number?</h3>
+            <p class="intro-body">
+                An Integer number in which the sum of the cubes of its digits is equal to the number itself is called Armstrong Number. <br> For example, 153 is an Armstrong number since 1**3 + 5**3 + 3**3 = 153.
+            </p>
+        </section>
+        <section id="para">
+            <h3 class="section-title">Parameters Needed</h3>
+            <ol class="para-body">
+              <li>sum</li>
+              <li>temp</li>
+              <li>num</li>  
+            </ol>
+        </section>
+    <section id="algo">
+            <h3 class="section-title">Algorithm</h3>
+            <pre class="algo-body">
+                Step 1: Start
+                Step 2: Declare Variable sum, temp, num
+                Step 3: Read num from User
+                Step 4: Initialize Variable sum=0 and temp=num
+                Step 5: Repeat Until num>=0
+                            5.1 sum=sum + cube of last digit i.e [(num%10)*(num%10)*(num%10)]
+                            5.2 num=num/10
+                Step 6: IF sum==temp
+                            Print "Armstrong Number"
+                        ELSE 
+                            Print "Not Armstrong Number"
+                Step 7: Stop 
+            </pre>
+        </section>
+        <section id="code">
+            <h3 class="section-title">Code</h3>
+            <pre class="code-body">
+
+                let sum = 0;
+                const number = prompt('Enter a three-digit positive integer: ');
+
+                let temp = number;
+                while (temp > 0) {
+                    let remainder = temp % 10;
+
+                    sum += remainder * remainder * remainder;
+
+                    temp = parseInt(temp / 10); // convert float into integer
+                }
+                if (sum == number) {
+                    console.log(`${number} is an Armstrong number`);
+                }
+                else {
+                    console.log(`${number} is not an Armstrong number.`);
+                }
+            </pre>
+        </section>
+        <section id="op">
+            <h3 class="section-title">Output</h3>
+            <img src="" alt="armstrong_number">
+
+        </section>
+    </main>
+    <footer>
+        <a href="https://github.com/SwarupVishwas18" target="_blank">
+        &copy; Swarup Deepak Vishwas
+        </a>
+    </footer>
+</body>
+</html>
