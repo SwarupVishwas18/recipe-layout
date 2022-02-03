@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+
+    <link rel="stylesheet" href="./recipe_theme.css">
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Marcellus&family=Montserrat&family=Syncopate&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="logo">
+        Program Recipes
+    </h1>
+    <hr>
+    <h2 class="title">
+        Fibonacci Series
+    </h2>
+    <hr>
+    <ul class="index">
+        <li>
+    <h3 class="section-title">Table of Contents (Click Me To Pick)</h3>
+
+        </li>
+        <a href="#intro">
+            <li>Introduction</li>
+        </a>
+        <a href="#para">
+            <li>Parameter Needed</li>
+        </a>
+        <a href="#algo">
+            <li>Algorithm</li>
+        </a>
+        <a href="#code">
+            <li>Code in Javascript</li>
+        </a>
+        <a href="#op">
+            <li>Output</li>
+        </a>
+    </ul>
+
+    <main>
+        <section id="intro">
+            <h3 class="section-title">Introduction: What is an Fibonacci Series?</h3>
+            <p class="intro-body">
+                A series of numbers in which each number is the sum of the two preceding or previous numbers is called Fibonacci Series.
+            </p>
+        </section>
+        <section id="para">
+            <h3 class="section-title">Parameters Needed</h3>
+            <ol class="para-body">
+              <li>a</li>
+              <li>b</li>
+              <li>c</li>  
+              <li>n</li>  
+              <li>i</li>  
+            </ol>
+        </section>
+    <section id="algo">
+            <h3 class="section-title">Algorithm</h3>
+            <pre class="algo-body">
+                Step 1: Start 
+                Step 2: Declare variable a, b, c, n, i
+                Step 3: Initialize variable a=0, b=1 and  i=2 
+                Step 4: Read n from user 
+                Step 5: Print a and b 
+                Step 6: Repeat until i<=n : 
+                        Step 6.1: c=a+b 
+                        Step 6.2: print c 
+                        Step 6.3: a=b, b=c 
+                        Step 6.4: i=i+1 
+                Step 7: Stop
+            </pre>
+        </section>
+        <section id="code">
+            <h3 class="section-title">Code</h3>
+            <pre class="code-body">
+
+                const number = parseInt(prompt('Enter the number of terms: '));
+                let n1 = 0, n2 = 1, nextTerm;
+
+                console.log('Fibonacci Series:');
+
+                for (let i = 1; i <= number; i++) {
+                    console.log(n1);
+                    nextTerm = n1 + n2;
+                    n1 = n2;
+                    n2 = nextTerm;
+                }
+            </pre>
+        </section>
+        <section id="op">
+            <h3 class="section-title">Output</h3>
+            <img src="./asset/fib.png" alt="fibonacci_series">
+
+        </section>
+    </main>
+    <footer>
+        <a href="https://github.com/SwarupVishwas18" target="_blank">
+        &copy; Swarup Deepak Vishwas
+        </a>
+    </footer>
+</body>
+</html>

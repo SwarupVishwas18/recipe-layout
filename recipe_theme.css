@@ -18,21 +18,27 @@ body {
         margin: 0rem 10rem;
 }
 
-main{
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    row-gap: 2rem;
-    flex: 0 0 50%; */
-}
 
 .logo, .title{
     font-family: 'Syncopate',
     sans-serif;
     padding: 1rem;
     margin: 1rem;
+}
+
+.logo{
+    color: skyblue;
+    animation: hue 10s infinite linear;
+}
+
+@keyframes hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
 }
 
 ul{

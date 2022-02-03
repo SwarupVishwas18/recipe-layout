@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Number</title>
+
+    <link rel="stylesheet" href="./recipe_theme.css">
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Marcellus&family=Montserrat&family=Syncopate&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="logo">
+        Program Recipes
+    </h1>
+    <hr>
+    <h2 class="title">
+        Factorial Number
+    </h2>
+    <hr>
+    <ul class="index">
+        <li>
+    <h3 class="section-title">Table of Contents (Click Me To Pick)</h3>
+
+        </li>
+        <a href="#intro">
+            <li>Introduction</li>
+        </a>
+        <a href="#para">
+            <li>Parameter Needed</li>
+        </a>
+        <a href="#algo">
+            <li>Algorithm</li>
+        </a>
+        <a href="#code">
+            <li>Code in Javascript</li>
+        </a>
+        <a href="#op">
+            <li>Output</li>
+        </a>
+    </ul>
+
+    <main>
+        <section id="intro">
+            <h3 class="section-title">Introduction: What is an Factorial Number?</h3>
+            <p class="intro-body">
+                Product of all consecutive Integer numbers up to n is called Factorial of a Number and is denoted by n!
+            </p>
+        </section>
+        <section id="para">
+            <h3 class="section-title">Parameters Needed</h3>
+            <ol class="para-body">
+              <li>n</li>
+              <li>fact</li>
+              <li>i</li> 
+            </ol>
+        </section>
+    <section id="algo">
+            <h3 class="section-title">Algorithm</h3>
+            <pre class="algo-body">
+                Step 1: Start
+                Step 2: Declare Variable n, fact, i
+                Step 3: Read number from User
+                Step 4: Initialize Variable fact=1 and i=1
+                Step 5: Repeat Until i<=number
+                            5.1 fact=fact*i
+                            5.2 i=i+1
+                Step 6: Print fact
+                Step 7: Stop
+            </pre>
+        </section>
+        <section id="code">
+            <h3 class="section-title">Code</h3>
+            <pre class="code-body">
+
+            const number = parseInt(prompt('Enter a positive integer: '));
+
+            if (number < 0) {
+                console.log('Error! Factorial for negative number does not exist.');
+            }
+
+            else if (number === 0) {
+                console.log(`The factorial of ${number} is 1.`);
+            }
+
+            else {
+                let fact = 1;
+                for (i = 1; i <= number; i++) {
+                    fact *= i;
+                }
+                console.log(`The factorial of ${number} is ${fact}.`);
+            }
+            </pre>
+        </section>
+        <section id="op">
+            <h3 class="section-title">Output</h3>
+            <img src="./asset/fact.png" alt="factorial_number">
+
+        </section>
+    </main>
+    <footer>
+        <a href="https://github.com/SwarupVishwas18" target="_blank">
+        &copy; Swarup Deepak Vishwas
+        </a>
+    </footer>
+</body>
+</html>
